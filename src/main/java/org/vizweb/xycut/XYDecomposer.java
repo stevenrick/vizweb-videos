@@ -52,7 +52,6 @@ public class XYDecomposer extends ImageDecomposer{
 			
 			List<SeparatorModel> separatorsSortedByPosition = Lists.newArrayList(separators);
 			Collections.sort(separatorsSortedByPosition, new Comparator<SeparatorModel>(){
-				@Override
 				public int compare(SeparatorModel a, SeparatorModel b) {
 					return a.isHorizontal() ? b.getY() - a.getY() : b.getX() - a.getX();
 				}				
@@ -144,7 +143,6 @@ public class XYDecomposer extends ImageDecomposer{
 
 			
 			SeparatorExtractAndSelector lineSeparatorExtractAndSelector = new SeparatorExtractAndSelector(){
-				@Override
 				public List<SeparatorModel> run() {
 					List<SeparatorModel> lineSeparators = lineSeparatorExtractor.extractFromRegion(roi);
 					List<SeparatorModel> selectedSeparators = Lists.newArrayList();
@@ -157,7 +155,6 @@ public class XYDecomposer extends ImageDecomposer{
 			};
 			
 			SeparatorExtractAndSelector spaceSeparatorExtractAndSelector = new SeparatorExtractAndSelector(){
-				@Override
 				public List<SeparatorModel> run() {
 					List<SeparatorModel> spaceSeparators = spaceSeparatorExtractor.extractFromRegion(roi);
 					if (spaceSeparators.isEmpty())

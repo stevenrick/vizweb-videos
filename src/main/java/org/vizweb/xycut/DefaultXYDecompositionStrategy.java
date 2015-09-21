@@ -15,10 +15,8 @@ public class DefaultXYDecompositionStrategy implements XYDecompositionStrategy {
 	
 	public static class SeparatorSelectionStrategies {
 		static final public SeparatorSelectionStrategy selectTheLargest = new SeparatorSelectionStrategy(){
-			@Override
 			public List<SeparatorModel> select(List<SeparatorModel> separators) {
 				SeparatorModel bestSeparator = Collections.max(separators, new Comparator<SeparatorModel>(){
-					@Override
 					public int compare(SeparatorModel o1, SeparatorModel o2) {
 						return Double.compare(o1.getWidth()*o1.getHeight(), o2.getWidth()*o2.getHeight());
 					}			
@@ -27,7 +25,6 @@ public class DefaultXYDecompositionStrategy implements XYDecompositionStrategy {
 			}
 		};
 		static final public SeparatorSelectionStrategy selectTheLargestAndSimilarOnes = new SeparatorSelectionStrategy(){
-			@Override
 			public List<SeparatorModel> select(List<SeparatorModel> separators) {
 							
 				List<SeparatorModel> selectedSeparators = selectTheLargest.select(separators);
@@ -48,10 +45,8 @@ public class DefaultXYDecompositionStrategy implements XYDecompositionStrategy {
 			}
 		};
 		static final public SeparatorSelectionStrategy selectTheThickest = new SeparatorSelectionStrategy(){
-			@Override
 			public List<SeparatorModel> select(List<SeparatorModel> separators) {
 				SeparatorModel bestSeparator = Collections.max(separators, new Comparator<SeparatorModel>(){
-					@Override
 					public int compare(SeparatorModel o1, SeparatorModel o2) {
 						return o1.getThickness() - o2.getThickness();
 					}			
@@ -61,32 +56,26 @@ public class DefaultXYDecompositionStrategy implements XYDecompositionStrategy {
 		};
 	}	
 		
-	@Override
 	public int getMinSeperatorSize() {
 		return 10;
 	}
 	
-	@Override
 	public int getMinStdDev(){
 		return 10;
 	}
 	
-	@Override
 	public int getMaxLevel(){
 		return 10;
 	}
 		
-	@Override
 	public boolean isSplittingHorizontally(){
 		return true;
 	}
 	
-	@Override
 	public boolean isSplittingVertically(){
 		return true;
 	}
 	
-	@Override
 	public boolean isSplittingFurther(SeparatorModel largestSeperator, int level){
 		return largestSeperator != null 
 		&& level < getMaxLevel();
@@ -94,27 +83,22 @@ public class DefaultXYDecompositionStrategy implements XYDecompositionStrategy {
 		//&& largestSeperator.getThickness()*largestSeparator.ge >= getMinSeperatorSize();
 	}
 
-	@Override
 	public boolean isRemovingBorder() {
 		return true;
 	}	
 	
-	@Override
 	public int getMinArea(){
 		return 50;
 	}
 	
-	@Override
 	public SeparatorSelectionStrategy getSeparatorSelectionStrategy(){
 		return SeparatorSelectionStrategies.selectTheLargestAndSimilarOnes;
 	}
 
-	@Override
 	public int getMinHeight() {
 		return 5;
 	}
 
-	@Override
 	public int getMinWidth() {
 		return 5;
 	}

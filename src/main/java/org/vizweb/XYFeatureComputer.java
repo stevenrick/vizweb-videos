@@ -106,7 +106,6 @@ public class XYFeatureComputer {
 		List<Block> leafNodes = getAllLeaves(root);
 		
 		List<Integer> leafDepths = Lists.transform(leafNodes, new Function<Block, Integer>() {
-			@Override
 			public Integer apply(Block node) {
 				return computeNodeDepth(node);
 			}	

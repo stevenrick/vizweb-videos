@@ -167,7 +167,6 @@ class SpaceSeparatorExtractor extends SeparatorExtractor {
 		
 		Function<CvArr, Double> stdevFunc = new Function<CvArr, Double>(){
 
-			@Override
 			public Double apply(CvArr array) {
 				CvScalar mean = new CvScalar();
 				CvScalar stdDev = new CvScalar();
@@ -182,7 +181,6 @@ class SpaceSeparatorExtractor extends SeparatorExtractor {
 		cvResetImageROI(input);
 
 		Function<Double, Boolean> isCloseToZero = new Function<Double, Boolean>(){
-			@Override
 			public Boolean apply(Double element) {
 				return element < 10;
 			}
@@ -258,7 +256,6 @@ class IndexedOrdering {
 		}
 		
 		Comparator<IndexedItem<T>> indexedComparator = new Comparator<IndexedItem<T>>(){
-			@Override
 			public int compare(IndexedItem<T> arg0, IndexedItem<T> arg1) {				
 				return comparator.compare(arg0.getItem(),arg1.getItem());
 			}			
@@ -311,7 +308,6 @@ class LineSeparatorExtractor extends SeparatorExtractor {
 		
 		
 		Function<CvArr, Integer> op = new Function<CvArr, Integer>(){
-			@Override
 			public Integer apply(CvArr arg0) {
 				return cvCountNonZero(arg0);
 			}
@@ -323,7 +319,6 @@ class LineSeparatorExtractor extends SeparatorExtractor {
 		
 		
 		Function<Integer, Boolean> isPossibleHorizontalLine = new Function<Integer, Boolean>(){
-			@Override
 			public Boolean apply(Integer element) {
 				return (1.0 * element / roi.width) > 
 				LINE_PIXEL_RATIO_THRESHOLD - retry * RATIO_DECREMENT;
@@ -331,7 +326,6 @@ class LineSeparatorExtractor extends SeparatorExtractor {
 		};
 		
 		Function<Integer, Boolean> isPossibleVerticalLine = new Function<Integer, Boolean>(){
-			@Override
 			public Boolean apply(Integer element) {
 				return (1.0 * element / roi.height) > 
 				LINE_PIXEL_RATIO_THRESHOLD - retry * RATIO_DECREMENT;

@@ -103,7 +103,6 @@ public class BannerExtractor implements PartExtractor{
 		}
 	}
 
-	@Override
 	public Rectangle findLocation(Block areaOfSearch) {
 		// TODO Auto-generated method stub
 		return null;

@@ -59,7 +59,6 @@ public class BlockAnalysis
 	public static double getAverageSpacing(List<Block> input) {
 		List<Block> blocks = new ArrayList<Block>(input);
 		Collections.sort(blocks, new Comparator<Block>(){
-			@Override
 			public int compare(Block arg0, Block arg1) {
 				return (int) (arg0.getBounds().getMaxX() - arg1.getBounds().getMaxX());
 			}

@@ -103,7 +103,6 @@ public class BlockTextDetector {
 		
 		// vertical overlap between children
 		Collections.sort(copyOfChildren, new Comparator<Block>(){
-				@Override
 				public int compare(Block arg0, Block arg1) {
 					return (int) (arg0.getBounds().getMaxX() - arg1.getBounds().getMaxX());
 				}

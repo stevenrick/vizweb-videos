@@ -56,7 +56,6 @@ public class QuadTreeDecomposer {
 		final Function<Rectangle, QuadtreeNode> decomposeHelper = 
 			new Function<Rectangle, QuadtreeNode>(){
 
-			@Override
 			public QuadtreeNode apply(Rectangle roi) {
 
 				if (roi.width < 10 && roi.height < 10){

@@ -14,7 +14,6 @@ public class FooterExtractor implements PartExtractor {
 	private static int MAX_POSSIBLE_LEVEL = 10;
 	private static int MAX_POSSIBLE_FOOTER_SIZE = 100000;
 	
-	@Override
 	public BufferedImage extract(BufferedImage input, Block decomposition) {
 		
 		// Find the block which most likely be the title banner
@@ -41,7 +40,6 @@ public class FooterExtractor implements PartExtractor {
 		return input;
 	}
 	
-	@Override
 	public Rectangle findLocation(Block area)
 	{
 		return recursiveFindLocation(area, 0);
@@ -117,7 +115,6 @@ public class FooterExtractor implements PartExtractor {
 		if (children.size() < 2) return recursiveFindCut(children.get(0), level+1);
 		
 		Collections.sort(children, new Comparator<Block>(){
-				@Override
 				public int compare(Block a, Block b) {
 					return (int) -(a.getBounds().getMaxY() - b.getBounds().getMaxY());
 				}
@@ -130,7 +127,6 @@ public class FooterExtractor implements PartExtractor {
 		if (b.getBounds().getMaxY()-lowest.getMaxY() > 20) {
 			// go to the biggest child
 			Collections.sort(children, new Comparator<Block>(){
-				@Override
 				public int compare(Block a, Block b) {
 					return (int) -(a.getArea() - b.getArea());
 				}
@@ -169,7 +165,6 @@ public class FooterExtractor implements PartExtractor {
 		else {
 			// go to the biggest child
 			Collections.sort(children, new Comparator<Block>(){
-				@Override
 				public int compare(Block a, Block b) {
 					return (int) -(a.getArea() - b.getArea());
 				}

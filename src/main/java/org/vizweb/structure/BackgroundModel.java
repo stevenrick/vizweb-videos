@@ -76,7 +76,6 @@ public class BackgroundModel {
 		@SuppressWarnings("unused")
 		ForegroundPixelCounter foregroundPixelCounterByBackgroundSubtraction = new ForegroundPixelCounter(){
 
-			@Override
 			public int count(Block leafNode) {
 				Color bgColor = leafNode.getBackgroundModel().getColor();
 				
@@ -99,7 +98,6 @@ public class BackgroundModel {
 		};
 		
 		ForegroundPixelCounter foregroundPixelCounterByEntireLeafNode = new ForegroundPixelCounter(){
-			@Override
 			public int count(Block leafNode) {
 				return leafNode.getArea();
 			}

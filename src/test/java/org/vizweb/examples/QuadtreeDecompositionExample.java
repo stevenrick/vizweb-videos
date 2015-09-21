@@ -13,7 +13,7 @@ public class QuadtreeDecompositionExample {
 	
 	public static void main(String[] args) throws IOException {
 		
-		File folder = new File("E:\\UMD\\Research\\dataset\\english");
+		File folder = new File("C:\\Users\\Stoves\\Desktop\\image_analysis");
 		File[] files = folder.listFiles();
 		
 		for (File file : files) {
