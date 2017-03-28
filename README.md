@@ -1,20 +1,24 @@
-# Welcome
+#Vizweb analysis for videos
+
+Forked and adapted from https://bitbucket.org/rmardiko/vizweb
+
+## Welcome
 
 Thanks for your interest in our work!
 
-# Prerequisite
+## Prerequisite
 
 This instruction assumes that you are familiar with Java (JDK 1.7) and Eclipse IDE.
 
-# Maven users
+## Maven users
 
 If you are familiar with [Maven](http://maven.apache.org/) environment, then you can just clone (or download) the repository and run ```mvn install``` to get vizweb-1.0-SNAPSHOT. See below on how to use the library.
 
-# Quick start
+## Quick start
 
 If you just need to run the compiled jar file and you are not interested in looking at the code, you can download the eclipse project [here](https://bitbucket.org/rmardiko/vizweb/downloads/vizweb-test.zip). Note that we use JDK 1.7 and we have not tested if it works with other Java versions.
 
-# Using the library
+## Using the library
 
 Before using the code, you should already have an image of a web page screenshot which will become the input. 
 
@@ -60,5 +64,5 @@ System.out.println("Horizontal Balance: " + QuadtreeFeatureComputer.computeHoriz
 System.out.println("Horizontal Symmetry: " + QuadtreeFeatureComputer.computeHorizontalSymmetry(qtColor));
 ```
 
-# Contact
+## Contact
 Please send any feedback or question to mardiko at cs dot umd dot edu. Thanks!
