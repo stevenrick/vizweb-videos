@@ -20,10 +20,10 @@ public class ImageBatchAnalyzer {
 	
 	public static void main(String[] args) throws IOException {
 		
-		File folder = new File("C:\\Users\\Stoves\\Desktop\\image_analysis");
+		File folder = new File("/VOLUMES/SSD/IMAGES");
 		File[] files = folder.listFiles();
 		
-		String output = "C:\\Users\\Stoves\\Desktop\\image_analysis\\results.csv";
+		String output = "/VOLUMES/SSD/IMAGES/results.csv";
 		FileWriter writer = new FileWriter(output);
 		 
 	    writer.append("Image");

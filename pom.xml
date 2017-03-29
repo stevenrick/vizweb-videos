@@ -2,6 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+        <repositories>
+                <repository>
+                        <id>alfresco public</id>
+                        <url>https://artifacts.alfresco.com/nexus/content/repositories/public</url>
+                </repository>
+        </repositories>
+
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -77,6 +84,12 @@
 	</build> -->
 
 	<dependencies>
+
+                <dependency>
+                       <groupId>com.googlecode.javacpp</groupId>
+                       <artifactId>javacpp</artifactId>
+                       <version>0.1</version>
+                </dependency>
 
 		<dependency>
 			<groupId>org.sikuli</groupId>
